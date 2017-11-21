@@ -51,9 +51,7 @@ public class RaboCustomerStatementController {
 	 * This controller method is to perform process the customer statements and
 	 * provide the error report.
 	 *
-	 * @param response
-	 * @param request
-	 * @param file
+	 * @param input
 	 * @throws IOException
 	 */
 	@POST
@@ -98,8 +96,6 @@ public class RaboCustomerStatementController {
 	 *
 	 * This method is to perform set server exception
 	 *
-	 * @param response
-	 * @param printWriter
 	 * @param ex
 	 */
 	private Response setServerException(ServerException ex) {
@@ -115,8 +111,6 @@ public class RaboCustomerStatementController {
 	 *
 	 * This method is to perform set client exception
 	 *
-	 * @param response
-	 * @param printWriter
 	 * @param ex
 	 */
 	private Response setClientException(ClientException ex) {
@@ -131,9 +125,6 @@ public class RaboCustomerStatementController {
 	/**
 	 *
 	 * This method is to perform set server exception
-	 *
-	 * @param response
-	 * @param printWriter
 	 */
 	private Response setServerException() {
 		logger.info("Set server exception");
@@ -146,7 +137,7 @@ public class RaboCustomerStatementController {
 	 *
 	 * This method is to perform get file type
 	 *
-	 * @param file
+	 * @param fileName
 	 */
 	private String getFileType(String fileName) {
 		logger.info("Get file type");
@@ -158,7 +149,6 @@ public class RaboCustomerStatementController {
 	 * This method is to perform write success message on the response.
 	 *
 	 * @param map
-	 * @param response
 	 */
 	public Response writeMessage(Map<String, String> map) {
 		logger.info("Write message");
