@@ -3,24 +3,12 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
 	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-	<display-name>Restful Web Application</display-name>
-	
-	<!-- <context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/raboCustomerStatementProcessorREST-servlet.xml</param-value>
-	</context-param>
-	 -->
+	<display-name>RaboCustomerStatementProcessor</display-name>	
 
 	<!-- Auto scan REST service -->
 	<context-param>
 		<param-name>resteasy.scan</param-name>
 		<param-value>true</param-value>
-	</context-param>
-
-	<!-- this need same with resteasy servlet url-pattern -->
-	<context-param>
-		<param-name>resteasy.servlet.mapping.prefix</param-name>
-		<param-value>/rabo</param-value>
 	</context-param>
 
 	<listener>
@@ -38,7 +26,7 @@
 
 	<servlet-mapping>
 		<servlet-name>raboCustomerStatementProcessorREST-servlet</servlet-name>
-		<url-pattern>/rabo/*</url-pattern>
+		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
 
 </web-app>
